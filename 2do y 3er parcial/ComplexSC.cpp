@@ -12,22 +12,29 @@ class Complejo
 	
 	public:
         Complejo(double Re=0.0,double Im=0.0);
+	
         double getReal(void)const;
         double getImaginario(void)const;
+	
         void setReal(const double R);
         void setImaginario(const double I);
-		int Menu(void);
-		void Leer(void);
-		void Estetica(void)const;
-		bool Validar(void)const;
-		Complejo operator+(const Complejo *AptC2)const;
-		Complejo operator-(const Complejo *AptC2)const;
-		Complejo operator*(const Complejo *AptC2)const;
-		Complejo operator/(const Complejo *AptC2)const;
-		void Imprimir2(void)const;
-		void Imprimir(const Complejo *AptC1, const Complejo *AptC2, const char S)const;
-		double RR(void)const;
-		double RI(void)const;
+	
+        int Menu(void);
+	void Leer(void);
+	
+	void Estetica(void)const;
+	bool Validar(void)const;
+	
+	Complejo operator+(const Complejo *AptC2)const;
+	Complejo operator-(const Complejo *AptC2)const;
+	Complejo operator*(const Complejo *AptC2)const;
+	Complejo operator/(const Complejo *AptC2)const;
+	
+	void Imprimir2(void)const;
+	void Imprimir(const Complejo *AptC1, const Complejo *AptC2, const char S)const;
+	
+	double RR(void)const;
+	double RI(void)const;
 };
 
 Complejo::Complejo(double Re,double Im)
@@ -48,12 +55,12 @@ double Complejo::getImaginario(void)const
 
 void Complejo::setImaginario(const double I)
 {
-	Tienda::I=I;
+	Complejo::I=I;
 }
 
 void Complejo::setReal(const double R)
 {
-	Tienda::R=R;
+	Complejo::R=R;
 }
 
 int Complejo::Menu(void)
